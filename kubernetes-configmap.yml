@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: kubernetes-configmap.yml
+  name: Spring-cloud-Kubernetes
 spec:
   type: LoadBalancer
   selector:
-    app: kubernetes-configmap.yml
+    app: Spring-cloud-Kubernetes
   ports:
     - name: http
       protocol: TCP
@@ -15,17 +15,17 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-configmap.yml
+  name: Spring-cloud-Kubernetes
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: kubernetes-configmap.yml
+      app: Spring-cloud-Kubernetes
   template:
     metadata:
       labels:
-        app: kubernetes-configmap.yml
+        app: Spring-cloud-Kubernetes
     spec:
       containers:
         - name: kubernetes-configmap.yml
-          image: karthikpilla/kubernetes-configmap.yml:latest
+          image: karthikpilla/Spring-cloud-Kubernetes/service.yml:latest
