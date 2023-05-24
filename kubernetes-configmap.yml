@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: kubernetes-configmap.yml
-          image: karthikpilla/Spring-cloud-Kubernetes/service.yml:latest
+          image: karthikpilla/Spring-cloud-Kubernetes:latest
